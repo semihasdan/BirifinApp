@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html class="light" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Birifin - Giriş Yap</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#D90429",
+              "secondary": "#2B2D42",
+              "accent": "#EDF2F4",
+              "light-bg": "#FFFFFF",
+              "dark-bg": "#000000",
+              "gray-1": "#E5E5E5",
+              "gray-2": "#CCCCCC",
+              "gray-3": "#777777",
+              "gray-4": "#333333",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {
+              "lg": "0.75rem",
+              "xl": "1rem"
+            }
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-light-bg dark:bg-dark-bg text-secondary dark:text-accent font-display antialiased">
+<div class="flex h-auto min-h-screen w-full flex-col items-center justify-between p-6">
+<div class="w-full max-w-sm">
+<header class="pt-12 pb-10 text-center">
+<h1 class="text-3xl font-bold tracking-tighter text-secondary dark:text-accent">Birifin</h1>
+</header>
+<main class="w-full">
+<div class="flex flex-col space-y-3">
+<button class="flex h-12 w-full items-center justify-center gap-3 rounded-lg border border-gray-1 dark:border-gray-4 bg-light-bg text-secondary font-semibold transition-colors hover:bg-gray-100 dark:bg-dark-bg dark:hover:bg-gray-4/40">
+<img alt="Google logo" class="h-5 w-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqKMPJtVCTQzVtH1zmBa2c9cP3Nw2v1Uk7FR6EmVTm5eEJTiBfhcXG-wN_80tRmsi1kR54IBS5MCXBFZkFCZ4pBaKXQ093Q6cyrmFgYRCW154EQtiZlcH58uiCCAWMMoaPdK3aI7mh16gpBC0UGfLMGqfLPnOddORwokNnDifLZ0dCgW24aDvpEEfb2tvTdxWQajzK1A418CY7Sd9-UL1yz5fwa6P30-PHb9dh4xtT0Tmu-bwINHbI2YmyDDtnrhjqjGdSbvYRXW3i"/>
+                    Continue with Google
+                </button>
+<button class="flex h-12 w-full items-center justify-center gap-3 rounded-lg border border-transparent bg-secondary dark:bg-accent text-light-bg dark:text-dark-bg font-semibold transition-colors hover:bg-opacity-90 dark:hover:bg-opacity-90">
+<svg class="h-5 w-5 text-white dark:text-black" fill="currentColor" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.152 6.896c-.92.02-1.808.402-2.552.962-.744.56-1.544 1.45-1.924 2.48-.424 1.133-.264 2.38.384 3.424.648 1.043 1.584 1.763 2.616 1.843.96-.04 1.896-.443 2.616-1.043.528-.423.984-1.023 1.224-1.683.024-.072.024-.12-.024-.168a.18.18 0 00-.192-.048c-.912.336-1.92.36-2.88.072-.936-.288-1.728-.89-2.256-1.68-.528-.816-.768-1.803-.6-2.835.168-1.032.792-2.018 1.656-2.666.864-.648 1.944-.986 3.024-.914.312.024.6.145.816.337a.187.187 0 00.12.145l.024.024c.048.048.072.096.072.168-.024.12-.072.24-.12.336-.264.552-.624 1.08-.984 1.536-.36.456-.768.864-1.224 1.224-.312.264-.552.41-.696.41-.096 0-.216-.048-.336-.144a.12.12 0 00-.096-.024c-.096.048-.144.144-.144.264a.203.203 0 00.096.192c.24.144.528.216.816.216.312 0 .6-.072.84-.216.744-.432 1.344-1.08 1.776-1.872.432-.792.624-1.704.552-2.64-.12-1.416-.816-2.786-2.016-3.674-1.2-.888-2.736-1.346-4.248-1.226-3.144.216-5.856 2.666-6.408 5.714-.576 3.096 1.056 6.096 3.936 7.034 2.88.936 5.928-.192 7.512-2.545.24-.36.12-.84-.24-1.08-.36-.24-.84-.12-1.08.24-.264.384-.576.744-.936 1.056-1.008.912-2.328 1.44-3.72 1.272-2.616-.36-4.584-2.547-4.824-5.187-.24-2.64 1.512-5.018 4.128-5.45C10.652 9.07 11.056 9 11.456 9c.48 0 .936.144 1.344.36.408.216.792.504 1.128.84.144.144.312.216.48.216.192 0 .336-.096.432-.264.096-.168.072-.384-.048-.552-.336-.48-.744-.912-1.2-1.272-.6-.456-1.296-.744-2.016-.816z"></path></svg>
+                    Continue with Apple
+                </button>
+</div>
+<div class="my-6 flex items-center">
+<div class="h-px flex-grow bg-gray-1 dark:bg-gray-4/50"></div>
+<span class="mx-4 text-sm text-gray-3 dark:text-gray-3">veya e-posta ile giriş yap</span>
+<div class="h-px flex-grow bg-gray-1 dark:bg-gray-4/50"></div>
+</div>
+<div class="flex flex-col space-y-4">
+<div>
+<label class="mb-1.5 block text-sm font-medium text-secondary dark:text-accent" for="email">E-posta</label>
+<div class="relative">
+<span class="material-symbols-outlined pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-gray-3">mail</span>
+<input class="form-input block h-12 w-full rounded-lg border border-gray-2 bg-light-bg dark:border-gray-4 dark:bg-gray-4/20 dark:text-accent pl-10 pr-3 text-secondary placeholder-gray-3 focus:border-primary focus:ring-0 focus:ring-offset-0" id="email" placeholder="ornek@mail.com" type="email"/>
+</div>
+</div>
+<div>
+<div class="mb-1.5 flex items-center justify-between">
+<label class="block text-sm font-medium text-secondary dark:text-accent" for="password">Şifre</label>
+<a class="text-sm text-gray-3 hover:text-primary dark:hover:text-primary" href="#">Şifremi unuttum?</a>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-gray-3">lock</span>
+<input class="form-input block h-12 w-full rounded-lg border border-gray-2 bg-light-bg dark:border-gray-4 dark:bg-gray-4/20 dark:text-accent pl-10 pr-3 text-secondary placeholder-gray-3 focus:border-primary focus:ring-0 focus:ring-offset-0" id="password" placeholder="••••••••" type="password"/>
+</div>
+</div>
+</div>
+<div class="mt-8 flex flex-col items-center gap-5">
+<button class="flex h-12 w-full items-center justify-center rounded-lg bg-primary px-6 text-base font-bold text-white transition-opacity hover:opacity-90 active:scale-95">
+                    Giriş Yap
+                </button>
+<p class="text-sm text-gray-3">
+                    Hesabın yok mu? <a class="font-semibold text-primary hover:underline" href="#">Kayıt ol</a>
+</p>
+</div>
+</main>
+</div>
+<footer class="w-full max-w-sm pb-4 text-center">
+<p class="text-xs text-gray-2 dark:text-gray-4">Birifin v1.0</p>
+</footer>
+</div>
+
+</body></html>

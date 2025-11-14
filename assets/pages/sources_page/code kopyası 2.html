@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html class="dark" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kaynaklar - Birifin</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#D90429",
+            "secondary": "#2B2D42",
+            "accent": "#EDF2F4",
+            "background-light": "#FFFFFF",
+            "background-dark": "#000000",
+            "gray-light": "#E5E5E5",
+            "gray-medium": "#CCCCCC",
+            "gray-dark": "#777777",
+            "gray-darker": "#333333",
+          },
+          fontFamily: {
+            "display": ["Work Sans", "sans-serif"]
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+      font-size: 24px;
+    }
+    .toggle-checkbox:checked {
+      right: 0;
+      border-color: #D90429;
+    }
+    .toggle-checkbox:checked+.toggle-label {
+      background-color: #D90429;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative mx-auto flex h-auto min-h-screen w-full max-w-md flex-col overflow-x-hidden">
+<header class="sticky top-0 z-10 bg-background-light dark:bg-background-dark px-4 pt-4 pb-2 border-b border-gray-light dark:border-gray-darker">
+<div class="flex items-center justify-between pb-4">
+<h1 class="text-2xl font-bold text-secondary dark:text-accent">Kaynaklar</h1>
+<button class="text-secondary dark:text-gray-dark">
+<span class="material-symbols-outlined !text-3xl">add_circle</span>
+</button>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-dark">search</span>
+<input class="w-full rounded-lg border border-gray-light dark:border-gray-darker bg-accent dark:bg-gray-darker py-2.5 pl-10 pr-4 text-secondary dark:text-accent placeholder-gray-dark focus:outline-none focus:ring-2 focus:ring-primary/50" placeholder="Kaynak ara..." type="search"/>
+</div>
+</header>
+<div class="flex space-x-2 p-4 overflow-x-auto whitespace-nowrap">
+<button class="px-4 py-1.5 text-sm font-medium rounded-full text-secondary dark:text-accent bg-accent dark:bg-gray-darker border-2 border-primary">Tümü</button>
+<button class="px-4 py-1.5 text-sm font-medium rounded-full text-secondary dark:text-accent bg-transparent dark:bg-transparent border border-gray-light dark:border-gray-darker">Haber</button>
+<button class="px-4 py-1.5 text-sm font-medium rounded-full text-secondary dark:text-accent bg-transparent dark:bg-transparent border border-gray-light dark:border-gray-darker">Ekonomi</button>
+<button class="px-4 py-1.5 text-sm font-medium rounded-full text-secondary dark:text-accent bg-transparent dark:bg-transparent border border-gray-light dark:border-gray-darker">Spor</button>
+<button class="px-4 py-1.5 text-sm font-medium rounded-full text-secondary dark:text-accent bg-transparent dark:bg-transparent border border-gray-light dark:border-gray-darker">Teknoloji</button>
+</div>
+<main class="flex-grow px-4 pb-24">
+<div class="flex flex-col space-y-3">
+<div class="flex items-center gap-4 rounded-xl border border-gray-light dark:border-gray-darker bg-background-light dark:bg-background-dark p-3 shadow-sm">
+<img alt="HaberTürk logo" class="size-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3fiw1wL6rvptdiNIdV7cRLfP1fboWKVgnxBtghMnWoouYvqwh3Oyy7WOp3f7OgALmrhNJdLhysm_bdo4Zszlq2Ttnb9sA5WmKcHeQiQKyvwpeh_w5TtwVSSNlx5E4rTZSAF3b-yvdSGzVnifknfZENdp6UcYzMsr82VNs4EFZgqtSDAClobbUjNF7-nkmA4Tb2GV5q43w2Dr_xFqXyEiEu95_M9bRk_ZFnZ9ttNPsFqQIyV-QJdVlWtxkELzLVa2yNtQeTnDJliw8"/>
+<div class="flex-1">
+<p class="text-base font-bold text-secondary dark:text-accent">HaberTürk</p>
+<p class="text-sm text-gray-dark">2 yeni özet</p>
+</div>
+<div class="relative flex items-center">
+<input class="sr-only toggle-checkbox" id="toggle1" type="checkbox"/>
+<label class="toggle-label block h-7 w-12 cursor-pointer rounded-full bg-gray-light dark:bg-gray-darker transition-colors" for="toggle1"></label>
+<div class="dot absolute left-1 top-1 h-5 w-5 rounded-full bg-white transition"></div>
+</div>
+</div>
+<div class="flex items-center gap-4 rounded-xl border border-gray-light dark:border-gray-darker bg-background-light dark:bg-background-dark p-3 shadow-sm">
+<img alt="NTV logo" class="size-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC46O0pFV03zh7k_gK8zjS5mOqBdq-CNiYK5JB-FYxutdOwdCZvhAMny4cPr28oQFALCORI0rSeW6u04xjlDzR7EDAub1HYg6aZaqIP0jkND8y85dDl-_DSs61o2msJXTeEZaduXypuGegLwWI8FNDd_WMmdvJ4PStAe7jUfXDrQdPOYmPhd-wERzkpg3YVMFRqLPIypUYT40WaZIRKluMpL58UE4LYlm-x_V6Q-XjFYB8itPc-YipyZCjxl6vqBuWgoAHwNfArGd5c"/>
+<div class="flex-1">
+<p class="text-base font-bold text-secondary dark:text-accent">NTV</p>
+<p class="text-sm text-gray-dark">Son video: 2 saat önce</p>
+</div>
+<div class="relative flex items-center">
+<input checked="" class="sr-only toggle-checkbox" id="toggle2" type="checkbox"/>
+<label class="toggle-label block h-7 w-12 cursor-pointer rounded-full bg-gray-light dark:bg-gray-darker transition-colors" for="toggle2"></label>
+<div class="dot absolute left-1 top-1 h-5 w-5 rounded-full bg-white transition"></div>
+</div>
+</div>
+<div class="flex items-center gap-4 rounded-xl border border-gray-light dark:border-gray-darker bg-background-light dark:bg-background-dark p-3 shadow-sm">
+<img alt="CNN Türk logo" class="size-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBit-3Y1XsfA7xx_fJJ5hTk5DWX7_E1gMStqV8RSULoh4tjeLEA6y99DPy9VrL3KiacrN88NGvFb3otDOgza7cYmguCtokoW1VEcvVhzHIQRb0mgQ23JbbEkRgMDdwq3hd4TXcaoN6r29xYjj6PkhLi5j6hIqVyh2OD66plh-d6XigJn8U-4As4XOyB0CW3emcaxGULP8hwoI5z9lk_DQEHV3JZXJJEz1pOpF2UPpOG2hx2TzrRqI_s701SdOugZTOosyNHn5cvYO-M"/>
+<div class="flex-1">
+<p class="text-base font-bold text-secondary dark:text-accent">CNN Türk</p>
+<p class="text-sm text-gray-dark">5 yeni özet</p>
+</div>
+<div class="relative flex items-center">
+<input checked="" class="sr-only toggle-checkbox" id="toggle3" type="checkbox"/>
+<label class="toggle-label block h-7 w-12 cursor-pointer rounded-full bg-gray-light dark:bg-gray-darker transition-colors" for="toggle3"></label>
+<div class="dot absolute left-1 top-1 h-5 w-5 rounded-full bg-white transition"></div>
+</div>
+</div>
+<div class="flex items-center gap-4 rounded-xl border border-gray-light dark:border-gray-darker bg-background-light dark:bg-background-dark p-3 shadow-sm">
+<img alt="Bloomberg HT logo" class="size-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOMutD6N_gKMUvMGzzQ1ir87-mH9U9B_YGboNdMqAI-P5qSymbCpjTEjlj7ulJi7W4dJ6GlxrG4lpK8ooAiL1yOOmOS-wCeE6S6L9dkph9m00SrjZOsgAoH8PymRF3EkadLxHxkdNaI7GgT5Qz_rs-eFcra_MWF4lKGGQVuPfypoY5HySokptcznDJlUQVSdq1H2uqOBPcTn0_YoRlalHqQxWgyP_TR66p2Tk9QbT2xMEnkjTdQwhacTmDyAfroRxFGcad0yino5C4"/>
+<div class="flex-1">
+<p class="text-base font-bold text-secondary dark:text-accent">Bloomberg HT</p>
+<p class="text-sm text-gray-dark">Son video: 1 saat önce</p>
+</div>
+<div class="relative flex items-center">
+<input class="sr-only toggle-checkbox" id="toggle4" type="checkbox"/>
+<label class="toggle-label block h-7 w-12 cursor-pointer rounded-full bg-gray-light dark:bg-gray-darker transition-colors" for="toggle4"></label>
+<div class="dot absolute left-1 top-1 h-5 w-5 rounded-full bg-white transition"></div>
+</div>
+</div>
+</div>
+</main>
+<nav class="fixed bottom-0 z-10 w-full max-w-md border-t border-gray-light dark:border-gray-darker bg-background-light dark:bg-background-dark">
+<div class="flex h-16 items-center justify-around px-4">
+<a class="flex flex-col items-center gap-1 text-gray-dark" href="#">
+<span class="material-symbols-outlined !text-2xl">home</span>
+<span class="text-xs font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined !text-2xl">feed</span>
+<span class="text-xs font-bold">Kaynaklar</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-dark" href="#">
+<span class="material-symbols-outlined !text-2xl">workspace_premium</span>
+<span class="text-xs font-medium">Pro</span>
+</a>
+</div>
+</nav>
+</div>
+<style>.toggle-checkbox:checked + .toggle-label {
+        background-color: #D90429;
+    }
+    .toggle-checkbox:checked + .toggle-label + .dot {
+        transform: translateX(20px);
+    }
+  </style>
+
+</body></html>

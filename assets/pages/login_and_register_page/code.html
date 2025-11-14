@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Birifin - Kayıt Ol</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class", // set to 'class' to support manual toggling
+      theme: {
+        extend: {
+          colors: {
+            "birifin-primary": "#D90429",
+            "birifin-secondary": "#2B2D42",
+            "birifin-accent": "#EDF2F4",
+            "birifin-light": "#FFFFFF",
+            "birifin-dark": "#000000",
+            "birifin-gray-100": "#E5E5E5",
+            "birifin-gray-200": "#CCCCCC",
+            "birifin-gray-300": "#777777",
+            "birifin-gray-400": "#333333",
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"],
+          },
+        },
+      },
+    };
+    </script>
+<style>.google-logo {
+        width: 18px;
+        height: 18px;
+        background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE3LjY0IDkuMTgxODJDMTcuNjQgOC41NDU0NSAxNy41OCA3Ljk1NDU1IDE3LjQ2IDcuNEg5VjEwLjgxODJIMTMuNjc4QzEzLjQ3NiAxMS45MzYzIDEyLjc5OCAxMi45MDkxIDExLjc5IDEzLjU5MDlWMTUuNzI3M0gxNC4zODJDMTYuNDMgMTQuMTE4MiAxNy42NCAxMS44MTgyIDE3LjY0IDkuMTgxODJaIiBmaWxsPSIjNDI4NUY0Ii8+CjxwYXRoIGQ9Ik05IDE4QzExLjk3IDggMTQuNDk2IDYuNzA5MDkgMTUuNzg4IDQuNDU0NTVMMTMuMTk2IDIuMzE4MTlDMTEuOTg4IDMuMTYzNjQgMTAuNjA2IDMuNjM2MzYgOSAzLjYzNjM2QzYuNjU0IDMuNjM2MzYgNC42NzIgMi4xODE4MiAzLjc5IDBIMi4xODAwMUMwLjgyIDQuMjI3MjcgNC4zMTIgOC45MDkwOSA5IDE4WiIgZmlsbD0iIzM0QTg1MyIvPgo8cGF0aCBkPSJNMzcgOS4zNjM2NEMzLjU3NiA4LjQ1NDU1IDMuNDM4IDcuNTAwMDEgMy40MzggNi41MDAwMUMzLjQzOCA1LjUgMy41NzYgNC41NDU0NSAzLjc5IDIuNjM2MzZIMi4yNDIwMUMwLjM4IDYuMTM2MzYgMC4zOCA5Ljg2MzY0IDEuMjQgMTEuMzYyN0wzLjc5IDkuMzYzNjRaIiBmaWxsPSIjRkJCQzA1Ii8+CjxwYXRoIGQ9Ik05IDMuMzYzNjRDMTAuMzQ0IDIuMTE4MTggMTEuNjQgMi4wOTkwOSAxMi43MiAzLjEyMjdMMTUuMzIgMC45MzkxQzEzLjQ3NiAtMC4xMzYzNjQgMTEuMjggLTAuMjgxODE4IDkgMC4wNDU0NTQ2QzQuMzEyIDQuMDIyNzMgMC44MiA1LjczNjM2IDEuMjQgNy43MjcyN0wzLjggOS44NjM2NEM0LjY3MiA2LjgyNzI3IDYuNjU0IDQuMzYzNjQgOSA0LjM2MzY0WiIgZmlsbD0iI0VBNDMzNSIvPgo8L3N2Zz4K');
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .apple-logo {
+        width: 20px;
+        height: 20px;
+        background-image: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSJ3aGl0ZSIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAyMi45IDIzLjgiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDIyLjkgMjMuODsiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwYXRoIGQ9Ik0xOC40LDExLjJjMC4xLTIuNywyLTMuOSw0LjQtMy45Yy0wLjMSwwLjEtMC4zLDEuOC0xLjEsMy4zYy0xLjEsMS45LTIuMSwzLjYtMi44LDQuOWMwLDAuMSwwLDAuMSwwLDAuMWMtMC4xLDAuMS0wLjEgMC4xLTAuMiwwLjFjLTAuNCwxLTAuOSwyLTIsMi45Yy0xLDAuOS0xLjgsMS4yLTIuOCwxLjNjLTAuNSwwLTAuOS0wLjEtMS40LTAuNGMtMC40LTAuMy0xLTAuNi0xLjktMC42Yy0wLjgsMC0xLjQsMC4zLTEuOCwwLjVjLTAuNiwwLjQtMSwwLjctMS42LDAuN2MtMC45LDAtMS45LTAuNS0yLjktMS41Yy0xLjMtMS4zLTIuMS0zLjEtMi4xLTUuM2MwLTMuNSwyLjYtNS40LDQuOS01LjRjMS4zLDAuMSwyLjQsMC44LDMuMywwLjhjMSwwLDEuOS0wLjgsMy4yLTAuOGMxLDAsMS44LDAuMywyLjUsMC44QzE4LjYsOC40LDE4LjYsOC40LDE4LjQsMTEuMnpNMTQuNiw2LjRjMC43LTEuMSwxLjEtMi40LDEtMy42YzAuMS0wLjItMC4xLTAuNC0wLjMtMC40Yy0wLjgsMC0xLjgsMC41LTIuNCwxLjNjLTAuNywwLjktMS4zLDIuMi0xLjEsMy40Yy0wLjEsMC4yLDAuMSwwLjQsMC4zLDAuNEMxMi4zLDcsMTMuOCw2LjksMTQuNiw2LjR6Ii8+PC9zdmc+');
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-birifin-light dark:bg-birifin-dark font-display">
+<div class="flex flex-col items-center justify-between min-h-screen p-6 sm:p-8">
+<header class="w-full max-w-sm text-center pt-8">
+<h1 class="text-3xl font-bold tracking-tight text-birifin-secondary dark:text-birifin-accent">
+Birifin
+</h1>
+</header>
+<main class="w-full max-w-sm flex-grow flex flex-col justify-center py-10">
+<div class="space-y-4">
+<button class="flex items-center justify-center w-full h-12 px-4 space-x-3 text-sm font-semibold text-birifin-secondary bg-birifin-light border rounded-full border-birifin-gray-100 dark:bg-birifin-gray-400 dark:text-birifin-light dark:border-birifin-gray-400 hover:bg-gray-50 dark:hover:bg-birifin-gray-300 transition-colors">
+<span class="google-logo"></span>
+<span>Sign up with Google</span>
+</button>
+<button class="flex items-center justify-center w-full h-12 px-4 space-x-3 text-sm font-semibold text-white bg-black rounded-full dark:bg-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors">
+<span class="apple-logo"></span>
+<span>Sign up with Apple</span>
+</button>
+</div>
+<div class="relative flex items-center py-6">
+<div class="flex-grow border-t border-birifin-gray-100 dark:border-birifin-gray-400"></div>
+<span class="mx-4 text-xs font-medium text-birifin-gray-300 dark:text-gray-500">
+veya e-posta ile kayıt ol
+</span>
+<div class="flex-grow border-t border-birifin-gray-100 dark:border-birifin-gray-400"></div>
+</div>
+<form action="#" class="space-y-4" method="POST">
+<div>
+<label class="text-sm font-medium text-birifin-secondary dark:text-birifin-accent" for="username">
+Username
+</label>
+<div class="mt-1">
+<input class="w-full px-4 py-3 text-base bg-birifin-light dark:bg-birifin-dark border rounded-lg border-birifin-gray-200 dark:border-birifin-gray-400 placeholder:text-birifin-gray-300 dark:text-white focus:outline-none focus:ring-2 focus:ring-birifin-primary focus:border-birifin-primary" id="username" name="username" placeholder="kullaniciadin" required="" type="text"/>
+</div>
+</div>
+<div>
+<label class="text-sm font-medium text-birifin-secondary dark:text-birifin-accent" for="email">
+Email
+</label>
+<div class="mt-1">
+<input class="w-full px-4 py-3 text-base bg-birifin-light dark:bg-birifin-dark border rounded-lg border-birifin-gray-200 dark:border-birifin-gray-400 placeholder:text-birifin-gray-300 dark:text-white focus:outline-none focus:ring-2 focus:ring-birifin-primary focus:border-birifin-primary" id="email" name="email" placeholder="sen@ornek.com" required="" type="email"/>
+</div>
+</div>
+<div>
+<label class="text-sm font-medium text-birifin-secondary dark:text-birifin-accent" for="password">
+Password
+</label>
+<div class="mt-1">
+<input class="w-full px-4 py-3 text-base bg-birifin-light dark:bg-birifin-dark border rounded-lg border-birifin-gray-200 dark:border-birifin-gray-400 placeholder:text-birifin-gray-300 dark:text-white focus:outline-none focus:ring-2 focus:ring-birifin-primary focus:border-birifin-primary" id="password" name="password" placeholder="••••••••" required="" type="password"/>
+</div>
+</div>
+<div>
+<label class="text-sm font-medium text-birifin-secondary dark:text-birifin-accent" for="confirm-password">
+Confirm Password
+</label>
+<div class="mt-1">
+<input class="w-full px-4 py-3 text-base bg-birifin-light dark:bg-birifin-dark border rounded-lg border-birifin-gray-200 dark:border-birifin-gray-400 placeholder:text-birifin-gray-300 dark:text-white focus:outline-none focus:ring-2 focus:ring-birifin-primary focus:border-birifin-primary" id="confirm-password" name="confirm-password" placeholder="••••••••" required="" type="password"/>
+</div>
+</div>
+<div class="pt-4">
+<button class="w-full h-12 px-6 text-base font-bold text-white transition-colors duration-200 transform bg-birifin-primary rounded-full hover:bg-red-700 focus:outline-none" type="submit">
+Kayıt Ol
+</button>
+</div>
+</form>
+<div class="mt-8 text-center">
+<p class="text-sm text-birifin-secondary dark:text-birifin-accent">
+Zaten bir hesabın var mı?
+<a class="font-semibold text-birifin-primary hover:underline" href="#">Giriş Yap</a>
+</p>
+</div>
+</main>
+<footer class="w-full max-w-sm pb-8 text-center">
+<p class="text-xs text-birifin-gray-200 dark:text-birifin-gray-300">
+Birifin v1.0
+</p>
+</footer>
+</div>
+
+</body></html>
